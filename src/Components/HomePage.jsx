@@ -657,14 +657,15 @@ const HomePage = () => {
                   </div>
                 )}
               </div>
-              <div className="container mt-4">
+              <div className="container mt-4 px-0">
                 <div className="alert alert-secondary" role="alert">
-                  <p className="text-muted mb-0">
-                    NOTE: This is Provisional Results of C-20 Exams Only, The
-                    results published on NET are for immediate information to
-                    the examinees, These cannot be treated as original mark
-                    sheets, Updates will be done and informed to the institutes.
-                    Any Grievance/Issue write to:
+                  <p className="mb-0">
+                    <strong>NOTE: </strong>
+                    This is Provisional Results of C-20 Exams Only, The results
+                    published on NET are for immediate information to the
+                    examinees, These cannot be treated as original mark sheets,
+                    Updates will be done and informed to the institutes. Any
+                    Grievance/Issue write to:
                     <a
                       href="mailto:btelinx@gmail.com"
                       className="alert-link text-primary"
