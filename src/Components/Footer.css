@@ -1,0 +1,21 @@
+.footer {
+    /* background-color: black !important; */
+  background: linear-gradient(to right, #83365d, #e45383, #c14773, #a64f9f);
+
+}
+
+.text-muted {
+    color: white !important;
+}
+
+#contact-student {
+    color: white;
+}
+
+#contact-student {
+    text-decoration: none;
+}
+
+#contact-student:hover {
+    text-decoration: underline;
+}

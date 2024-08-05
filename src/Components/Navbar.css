@@ -1,3 +1,4 @@
+/* General styles */
 .navbar {
   background: linear-gradient(to right, #83365d, #e45383, #c14773, #a64f9f);
 }
@@ -37,14 +38,3 @@
   font-size: 1rem;
   font-weight: bold;
 }
-
-#contact-student {
-  text-decoration: none;
-}
-
-.alert  {
-  padding: 5px !important;
-  margin: 0px !important;
-  border-radius: 0px;
-}
-
