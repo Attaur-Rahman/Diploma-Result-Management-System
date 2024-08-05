@@ -1,0 +1,24 @@
+<?php
+session_start();
+
+// Check if the user is not logged in
+if (!isset($_SESSION['loggedin'])) {
+    // Redirect to login page after 2 seconds
+    header('refresh:2;url=../AdminLoginPage.php');
+    echo "You need to login first to view the dashboard!";
+    exit();
+}
+
+// Database connection parameters
+$servername = "localhost";
+$username = "";
+$password = "";
+$dbname = "";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}

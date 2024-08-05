@@ -1,0 +1,50 @@
+.navbar {
+  background: linear-gradient(to right, #83365d, #e45383, #c14773, #a64f9f);
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+.navbar-brand span {
+  display: flex;
+  flex-direction: column;
+}
+
+.bte {
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.m-y {
+  font-family: "Noto Sans", sans-serif;
+  color: yellow;
+}
+
+.navbar-toggler {
+  background-color: white;
+}
+
+.marquee-container {
+  background-color: #f5f5f5;
+  padding: 5px;
+}
+
+.marquee {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#contact-student {
+  text-decoration: none;
+}
+
+.alert  {
+  padding: 5px !important;
+  margin: 0px !important;
+  border-radius: 0px;
+}
+

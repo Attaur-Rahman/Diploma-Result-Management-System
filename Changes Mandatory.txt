@@ -1,0 +1,25 @@
+CHANGES SHOULD BE MADE BEFORE EXECUTING THIS WEBSITE
+
+1) In ./src/Components/HomePage.jsx :
+// Event handler for form submission :-> "https://website-name/bte/Results.php" Replace website-name with your website or localhost.
+
+2) In ./src/Components/Navbar.jsx :
+// Function to simulate fetching updates from an API :-> Update this based on Results.
+
+<a href="https://website-name/bte/AdminLoginPage.php" className="btn btn-light"> Login </a> :-> Replace website-name with your website or localhost.
+
+3) In ./bte/AdminDashboard/Backend/connectdb.php :
+// Database connection parameters :-> Update database details between the quatations.
+
+4) In ./bte/adminlogin.php :
+// Database connection parameters :-> Update database details between the quatations.
+
+5) In ./bte/Results.php :
+// Database connection parameters :-> Update database details between the quatations.
+
+6) In ./bte/AdminLoginPage.php :
+<div class="mt-3 d-flex align-items-center justify-content-center"> 
+<span class="">
+Go to <a href="https://website-name/">HomePage</a>
+</span>
+</div> :-> Replace website-name with your website or localhost.
