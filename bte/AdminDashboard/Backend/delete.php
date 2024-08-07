@@ -22,7 +22,7 @@ if (isset($_GET['deletestudentwithregno'])) {
                 if (confirm('Are you sure you want to delete the student with register number " . $register_number . "?')) {
                     document.location.href = '?delete_student=" . $register_number . "';
                 } else {
-                    document.location.href = '../Students.php';
+                    document.location.href = '../Students';
                 }
               </script>";
     } else {
@@ -50,7 +50,7 @@ if (isset($_GET['deletestudentwithregno'])) {
                 if (confirm('Are you sure you want to delete the institute with ID " . $institute_id . "?')) {
                     document.location.href = '?delete_institute=" . $institute_id . "';
                 } else {
-                    document.location.href = '../Institutes.php';
+                    document.location.href = '../Institutes';
                 }
               </script>";
     } else {
@@ -78,7 +78,7 @@ if (isset($_GET['deletestudentwithregno'])) {
                 if (confirm('Are you sure you want to delete the branch with ID " . $branch_id . "?')) {
                     document.location.href = '?delete_branch=" . $branch_id . "';
                 } else {
-                    document.location.href = '../Branches.php';
+                    document.location.href = '../Branches';
                 }
               </script>";
     } else {
@@ -106,7 +106,7 @@ if (isset($_GET['deletestudentwithregno'])) {
                 if (confirm('Are you sure you want to delete the subject with code " . $subject_code . "?')) {
                     document.location.href = '?delete_subject=" . $subject_code . "';
                 } else {
-                    document.location.href = '../Subjects.php';
+                    document.location.href = '../Subjects';
                 }
               </script>";
     } else {
@@ -136,7 +136,7 @@ if (isset($_GET['deletestudentwithregno'])) {
                 document.location.href = '?delete_rno=" . $register_number . "&delete_subcode=" . $subject_code . "';
             } else {
                 // If canceled, redirect back to results page
-                document.location.href = '../MResults.php'; 
+                document.location.href = '../MResults'; 
             }
         </script>";
     } else {
@@ -164,7 +164,7 @@ if (isset($_GET['deletestudentwithregno'])) {
 
     // Check if any rows were affected
     if ($stmt->affected_rows > 0) {
-        header("Location: ../Students.php?deleted=1");
+        header("Location: ../Students?deleted=1");
     } else {
         echo "No records deleted.";
     }
@@ -186,7 +186,7 @@ if (isset($_GET['deletestudentwithregno'])) {
 
     // Check if any rows were affected
     if ($stmt->affected_rows > 0) {
-        header("Location: ../Institutes.php?deleted=1");
+        header("Location: ../Institutes?deleted=1");
     } else {
         echo "No records deleted.";
     }
@@ -208,7 +208,7 @@ if (isset($_GET['deletestudentwithregno'])) {
 
     // Check if any rows were affected
     if ($stmt->affected_rows > 0) {
-        header("Location: ../Branches.php?deleted=1");
+        header("Location: ../Branches?deleted=1");
     } else {
         echo "No records deleted.";
     }
@@ -230,7 +230,7 @@ if (isset($_GET['deletestudentwithregno'])) {
 
     // Check if any rows were affected
     if ($stmt->affected_rows > 0) {
-        header("Location: ../Subjects.php?deleted=1");
+        header("Location: ../Subjects?deleted=1");
     } else {
         echo "No records deleted.";
     }
@@ -248,7 +248,7 @@ if (isset($_GET['deletestudentwithregno'])) {
     // Check if any rows were affected
     if ($stmt->affected_rows > 0) {
         // Redirect back to the results page with a query parameter indicating deletion success
-        header("Location: ../MResults.php?deleted=1");
+        header("Location: ../MResults?deleted=1");
         exit(); // Ensure no further output is sent after the header redirection
     } else {
         echo "No records deleted.";

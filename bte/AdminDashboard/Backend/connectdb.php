@@ -4,7 +4,7 @@ session_start();
 // Check if the user is not logged in
 if (!isset($_SESSION['loggedin'])) {
     // Redirect to login page after 2 seconds
-    header('refresh:2;url=../AdminLoginPage.php');
+    header('refresh:2;url=../AdminLoginPage');
     echo "You need to login first to view the dashboard!";
     exit();
 }

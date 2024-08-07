@@ -31,7 +31,7 @@ if (isset($_POST['result_submit'])) {
     // Check if the query was successful
     if ($result) {
         // Redirect to the manage results page with success message
-        header('Location: ../MResults.php?added=1');
+        header('Location: ../MResults?added=1');
     } else {
         // Display error message if query fails
         echo "Error inserting result record: " . $conn->error;

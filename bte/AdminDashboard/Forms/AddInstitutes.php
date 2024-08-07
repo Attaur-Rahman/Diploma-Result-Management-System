@@ -18,7 +18,7 @@ if (isset($_POST['institute_submit'])) {
     // Check if the query was successful
     if ($result) {
         // Redirect to Institutes page with added parameter in the URL
-        header('Location: ../Institutes.php?added=1');
+        header('Location: ../Institutes?added=1');
         // Exit to prevent further execution
         exit();
     } else {

@@ -58,9 +58,9 @@ if (isset($_POST['search'])) {
     ?>
     <div class="container my-5">
         <!-- Back button to navigate to the dashboard -->
-        <a href="../AdminDashboard/Dashboard.php" class="btn btn-outline-dark">Back</a>
+        <a href="../AdminDashboard/Dashboard" class="btn btn-outline-dark">Back</a>
         <!-- Button to add new subjects -->
-        <a href="./Forms/AddSubjects.php" class="btn btn-success">Add Subjects</a>
+        <a href="./Forms/AddSubjects" class="btn btn-success">Add Subjects</a>
         <!-- Note about the consequences of deleting a subject -->
         <h5 class="my-2 text-danger">
             <i class="bi bi-exclamation-triangle-fill"></i>
@@ -117,9 +117,9 @@ if (isset($_POST['search'])) {
                             echo '<td>';
                             echo '<div class="d-inline-flex">';
                             // Button to update subject details
-                            echo '<a href="../AdminDashboard/Forms/UpdateSubject.php?updatesubjectwithcode=' . $subject_code . '" class="btn btn-primary mx-2">Update</a>';
+                            echo '<a href="../AdminDashboard/Forms/UpdateSubject?updatesubjectwithcode=' . $subject_code . '" class="btn btn-primary mx-2">Update</a>';
                             // Button to delete subject
-                            echo '<a href="../AdminDashboard/Backend/delete.php?deletesubjectwithcode=' . $subject_code . '" class="btn btn-danger">Delete</a>';
+                            echo '<a href="../AdminDashboard/Backend/delete?deletesubjectwithcode=' . $subject_code . '" class="btn btn-danger">Delete</a>';
                             echo '</div>';
                             echo '</td>';
                             echo '</tr>';

@@ -8,5 +8,5 @@ session_unset();
 session_destroy();
 
 // Redirect to the login page
-header("Location: ./AdminLoginPage.php?loggedout=1");
+header("Location: ./AdminLoginPage?loggedout=1");
 exit();

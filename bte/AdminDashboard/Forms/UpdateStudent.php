@@ -72,7 +72,7 @@ if (isset($_POST['student_update'])) {
     // Check if the update was successful
     if ($result) {
         // Redirect to Students page with updated parameter
-        header("Location: ../Students.php?updated=1");
+        header("Location: ../Students?updated=1");
     } else {
         echo "Error updating student record: " . $conn->error;
     }

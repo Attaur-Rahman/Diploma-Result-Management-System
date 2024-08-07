@@ -66,24 +66,24 @@ include "../AdminDashboard/Backend/connectdb.php";
                     </div>
                     <div class="card-body bg-warning-subtle">
                         <div class="d-grid gap-2 mb-4">
-                            <a href="Students.php" class="btn btn-dark">Manage Students</a>
+                            <a href="Students" class="btn btn-dark">Manage Students</a>
                         </div>
                         <div class="d-grid gap-2 mb-4">
-                            <a href="Institutes.php" class="btn btn-info text-white">Manage Institutes</a>
+                            <a href="Institutes" class="btn btn-info text-white">Manage Institutes</a>
                         </div>
                         <div class="d-grid gap-2 mb-4">
-                            <a href="Branches.php" class="btn btn-primary">Manage Branches</a>
+                            <a href="Branches" class="btn btn-primary">Manage Branches</a>
                         </div>
                         <div class="d-grid gap-2 mb-4">
-                            <a href="Subjects.php" class="btn btn-warning text-white">Manage Subjects</a>
+                            <a href="Subjects" class="btn btn-warning text-white">Manage Subjects</a>
                         </div>
                         <div class="d-grid gap-2 mb-4">
-                            <a href="MResults.php" class="btn btn-success">Manage Results</a>
+                            <a href="MResults" class="btn btn-success">Manage Results</a>
                         </div>
                     </div>
                     <div class="card-footer text-muted text-center">
                         <a href="http://localhost:3000/" class="btn btn-outline-dark">Back</a>
-                        <a href="../adminlogout.php" class="btn btn-danger">Logout</a>
+                        <a href="../adminlogout" class="btn btn-danger">Logout</a>
                     </div>
                 </div>
             </div>

@@ -37,7 +37,7 @@ if (isset($_POST['branch_update'])) {
         // Check if updating students' branch_id was successful
         if ($result_update_students) {
             // Redirect to Branches page with updated parameter
-            header("Location: ../Branches.php?updated=1");
+            header("Location: ../Branches?updated=1");
         } else {
             // Display an error message if updating students' branch_id fails
             echo "Error updating students' branch_id: " . $conn->error;

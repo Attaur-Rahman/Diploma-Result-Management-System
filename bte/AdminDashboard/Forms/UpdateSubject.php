@@ -39,7 +39,7 @@ if (isset($_POST['subject_update'])) {
         // Check if the results update was successful
         if ($result_update_results) {
             // Redirect to the Subjects page with a success message
-            header("Location: ../Subjects.php?updated=1");
+            header("Location: ../Subjects?updated=1");
             exit(); // Stop further execution of the script
         } else {
             // Display an error message if the results update fails

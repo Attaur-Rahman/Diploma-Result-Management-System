@@ -60,8 +60,8 @@ if (isset($_POST['search'])) {
     echo "<script>history.replaceState({}, '', window.location.href.split('?')[0]);</script>";
     ?>
     <div class="container my-5">
-        <a href="../AdminDashboard/Dashboard.php" class="btn btn-outline-dark">Back</a>
-        <a href="./Forms/AddStudents.php" class="btn btn-success">Add Student</a>
+        <a href="../AdminDashboard/Dashboard" class="btn btn-outline-dark">Back</a>
+        <a href="./Forms/AddStudents" class="btn btn-success">Add Student</a>
         <h5 class="my-2 text-danger">
             <i class="bi bi-exclamation-triangle-fill"></i>
             <span>NOTE: Deleting the student will also delete associated result records</span>
@@ -139,8 +139,8 @@ if (isset($_POST['search'])) {
                             echo '<td>' . $institute_id . ' - ' . $institute_name . '</td>';
                             echo '<td>';
                             echo '<div class="d-inline-flex">';
-                            echo '<a href="../AdminDashboard/Forms/UpdateStudent.php?updatestudentwithregno=' . $register_number . '" class="btn btn-primary mx-2">Update</a>';
-                            echo '<a href="../AdminDashboard/Backend/delete.php?deletestudentwithregno=' . $register_number . '" class="btn btn-danger">Delete</a>';
+                            echo '<a href="../AdminDashboard/Forms/UpdateStudent?updatestudentwithregno=' . $register_number . '" class="btn btn-primary mx-2">Update</a>';
+                            echo '<a href="../AdminDashboard/Backend/delete?deletestudentwithregno=' . $register_number . '" class="btn btn-danger">Delete</a>';
                             echo '</div>';
                             echo '</td>';
                             echo '</tr>';

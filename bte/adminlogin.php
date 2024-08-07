@@ -29,18 +29,18 @@ if ($stmt = $conn->prepare("SELECT Id, Password FROM adminlogin WHERE Email = ?"
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['Uemail'];
             $_SESSION['id'] = $Id;
-            header('Location: ./AdminDashboard/Dashboard.php?loggedin=1');
+            header('Location: ./AdminDashboard/Dashboard?loggedin=1');
             exit();
         } else {
             // echo "Incorrect Password!";
             // header('refresh:2;url=AdminLoginPage.php');
-            header("Location: AdminLoginPage.php?error=Invalid Password!");
+            header("Location: AdminLoginPage?error=Invalid Password!");
             exit();
         }
     } else {
         // echo "Incorrect Username!";
         // header('refresh:2;url=AdminLoginPage.php');
-        header("Location: AdminLoginPage.php?error=Invalid Email!");
+        header("Location: AdminLoginPage?error=Invalid Email!");
         exit();
     }
     $stmt->close();

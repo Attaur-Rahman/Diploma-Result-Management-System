@@ -57,8 +57,8 @@ if (isset($_POST['search'])) {
     echo "<script>history.replaceState({}, '', window.location.href.split('?')[0]);</script>";
     ?>
     <div class="container my-5">
-        <a href="../AdminDashboard/Dashboard.php" class="btn btn-outline-dark">Back</a>
-        <a href="./Forms/AddInstitutes.php" class="btn btn-success">Add Institute</a>
+        <a href="../AdminDashboard/Dashboard" class="btn btn-outline-dark">Back</a>
+        <a href="./Forms/AddInstitutes" class="btn btn-success">Add Institute</a>
         <h5 class="my-2 text-danger">
             <i class="bi bi-exclamation-triangle-fill"></i>
             <span>NOTE: Deleting the institute will also delete associated student records</span>
@@ -112,9 +112,9 @@ if (isset($_POST['search'])) {
                             echo '<td>';
                             echo '<div class="d-inline-flex">';
                             // Update link with institute ID as parameter
-                            echo '<a href="../AdminDashboard/Forms/UpdateInstitute.php?updateinstitutewithid=' . $institute_id . '" class="btn btn-primary mx-2">Update</a>';
+                            echo '<a href="../AdminDashboard/Forms/UpdateInstitute?updateinstitutewithid=' . $institute_id . '" class="btn btn-primary mx-2">Update</a>';
                             // Delete link with institute ID as parameter
-                            echo '<a href="../AdminDashboard/Backend/delete.php?deleteinstitutewithid=' . $institute_id . '" class="btn btn-danger">Delete</a>';
+                            echo '<a href="../AdminDashboard/Backend/delete?deleteinstitutewithid=' . $institute_id . '" class="btn btn-danger">Delete</a>';
                             echo '</div>';
                             echo '</td>';
                             echo '</tr>';

@@ -60,7 +60,7 @@ if (isset($_POST['result_update'])) {
     // Check if the update was successful
     if ($result) {
         // Redirect to the manage results page with a success message
-        header("Location: ../MResults.php?updated=1");
+        header("Location: ../MResults?updated=1");
         exit(); // Exit script to prevent further execution
     } else {
         // Display error message if the update fails

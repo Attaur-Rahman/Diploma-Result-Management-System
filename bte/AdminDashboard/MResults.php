@@ -57,8 +57,8 @@ if (isset($_POST['search'])) {
     echo "<script>history.replaceState({}, '', window.location.href.split('?')[0]);</script>";
     ?>
     <div class="container my-5">
-        <a href="../AdminDashboard/Dashboard.php" class="btn btn-outline-dark">Back</a>
-        <a href="./Forms/AddResults.php" class="btn btn-success">Add Results</a>
+        <a href="../AdminDashboard/Dashboard" class="btn btn-outline-dark">Back</a>
+        <a href="./Forms/AddResults" class="btn btn-success">Add Results</a>
         <!-- Search form -->
         <form method="POST" class="mt-3" id="searchForm">
             <div class="row g-3">
@@ -160,9 +160,9 @@ if (isset($_POST['search'])) {
                             echo '<td>';
                             echo '<div class="d-inline-flex">';
                             // Link to update result
-                            echo '<a href="../AdminDashboard/Forms/UpdateResult.php?updateresultwithregno=' . $register_number . '&updateresultwithscode=' . $subject_code . '" class="btn btn-primary mx-2">Update</a>';
+                            echo '<a href="../AdminDashboard/Forms/UpdateResult?updateresultwithregno=' . $register_number . '&updateresultwithscode=' . $subject_code . '" class="btn btn-primary mx-2">Update</a>';
                             // Link to delete result
-                            echo '<a href="../AdminDashboard/Backend/delete.php?deleteresultwithregno=' . $register_number . '&deleteresultwithscode=' . $subject_code . '" class="btn btn-danger">Delete</a>';
+                            echo '<a href="../AdminDashboard/Backend/delete?deleteresultwithregno=' . $register_number . '&deleteresultwithscode=' . $subject_code . '" class="btn btn-danger">Delete</a>';
                             echo '</div>';
                             echo '</td>';
                             echo '</tr>';

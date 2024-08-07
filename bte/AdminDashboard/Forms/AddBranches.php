@@ -18,7 +18,7 @@ if (isset($_POST['branch_submit'])) {
     // Check if the insertion was successful
     if ($result) {
         // Redirect to Branches page with added parameter
-        header('Location: ../Branches.php?added=1');
+        header('Location: ../Branches?added=1');
     } else {
         // Display an error message if the insertion fails
         echo "Error inserting branch record: " . $conn->error;

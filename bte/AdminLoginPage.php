@@ -5,7 +5,7 @@ session_start();
 // Check if user is already logged in
 if (isset($_SESSION['loggedin'])) {
     // Redirect to login page
-    header("Location: ./AdminDashboard/Dashboard.php?logged=1");
+    header("Location: ./AdminDashboard/Dashboard?logged=1");
     exit; // Stop further execution
 }
 ?>
@@ -83,7 +83,7 @@ if (isset($_SESSION['loggedin'])) {
                     <input type="submit" class="btn btn-success mt-2" value="Login" />
                 </div>
                 <div class="mt-3 d-flex align-items-center justify-content-center">
-                    <span class="">Go to <a href="https://website-name/">HomePage</a></span>
+                    <span class="">Go to <a href="http://192.168.29.93:3000/">HomePage</a></span>
                 </div>
             </div>
         </form>

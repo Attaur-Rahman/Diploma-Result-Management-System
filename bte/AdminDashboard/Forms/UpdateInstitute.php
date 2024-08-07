@@ -36,7 +36,7 @@ if (isset($_POST['institute_update'])) {
 
         if ($result_update_students) {
             // Redirect to Institutes page with updated parameter in the URL
-            header("Location: ../Institutes.php?updated=1");
+            header("Location: ../Institutes?updated=1");
             // Exit to prevent further execution
             exit();
         } else {

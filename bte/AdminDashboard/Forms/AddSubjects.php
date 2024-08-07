@@ -18,7 +18,7 @@ if (isset($_POST['subject_submit'])) {
     // Check if the query was successful
     if ($result) {
         // Redirect to the subjects page with a success message
-        header('Location: ../Subjects.php?added=1');
+        header('Location: ../Subjects?added=1');
         exit(); // Stop further execution of the script
     } else {
         // Display an error message if the query fails

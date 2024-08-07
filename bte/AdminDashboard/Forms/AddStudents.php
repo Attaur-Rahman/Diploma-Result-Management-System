@@ -29,7 +29,7 @@ if (isset($_POST['student_submit'])) {
     // Check if the insert was successful
     if ($result) {
         // Redirect to Students page with added parameter
-        header('Location: ../Students.php?added=1');
+        header('Location: ../Students?added=1');
         exit();
     } else {
         // Display an error message if the insert fails
