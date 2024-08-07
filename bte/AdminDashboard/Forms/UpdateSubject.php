@@ -141,6 +141,10 @@ if (isset($_POST['subject_update'])) {
                 <div class="d-grid gap-2 mt-3">
                     <button type="submit" class="btn btn-primary mt-2" name="subject_update">Update Subject</button>
                 </div>
+
+                <div class="d-grid gap-2 mt-3">
+                    <a href="../Subjects" class="btn btn-dark">Back</a>
+                </div>
             </form>
         </div>
     </div>

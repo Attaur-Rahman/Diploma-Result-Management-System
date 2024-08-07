@@ -205,6 +205,9 @@ if (isset($_POST['student_update'])) {
                     <button type="submit" class="btn btn-primary mt-2" name="student_update">Update Student</button>
                 </div>
 
+                <div class="d-grid gap-2 mt-3">
+                    <a href="../Students" class="btn btn-dark">Back</a>
+                </div>
             </form>
         </div>
     </div>

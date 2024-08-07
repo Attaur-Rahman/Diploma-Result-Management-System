@@ -145,6 +145,9 @@ if (isset($_POST['student_submit'])) {
                 <div class="d-grid gap-2 mt-3">
                     <button type="submit" class="btn btn-success mt-2" name="student_submit">Add Student</button>
                 </div>
+                <div class="d-grid gap-2 mt-3">
+                    <a href="../Students" class="btn btn-dark">Back</a>
+                </div>
             </form>
         </div>
     </div>

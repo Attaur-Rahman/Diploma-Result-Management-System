@@ -137,6 +137,10 @@ $institute_name = $row['institute_name'];
                 <div class="d-grid gap-2 mt-3">
                     <button type="submit" class="btn btn-primary mt-2" name="institute_update">Update Institute</button>
                 </div>
+
+                <div class="d-grid gap-2 mt-3">
+                    <a href="../Institutes" class="btn btn-dark">Back</a>
+                </div>
             </form>
         </div>
     </div>

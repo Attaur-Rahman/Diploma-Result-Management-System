@@ -113,6 +113,9 @@ if (isset($_POST['subject_submit'])) {
                 <div class="d-grid gap-2 mt-3">
                     <button type="submit" class="btn btn-success mt-2" name="subject_submit">Add Subject</button>
                 </div>
+                <div class="d-grid gap-2 mt-3">
+                    <a href="../Subjects" class="btn btn-dark">Back</a>
+                </div>
             </form>
         </div>
     </div>

@@ -138,6 +138,10 @@ if (isset($_POST['branch_update'])) {
                 <div class="d-grid gap-2 mt-3">
                     <button type="submit" class="btn btn-primary mt-2" name="branch_update">Update branch</button>
                 </div>
+
+                <div class="d-grid gap-2 mt-3">
+                    <a href="../Branches" class="btn btn-dark">Back</a>
+                </div>
             </form>
         </div>
     </div>

@@ -194,6 +194,10 @@ if (isset($_POST['result_update'])) {
                 <div class="d-grid gap-2 mt-3">
                     <button type="submit" class="btn btn-primary mt-2" name="result_update">Update Result</button>
                 </div>
+
+                <div class="d-grid gap-2 mt-3">
+                    <a href="../MResults" class="btn btn-dark">Back</a>
+                </div>
             </form>
         </div>
     </div>

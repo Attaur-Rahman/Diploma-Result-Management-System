@@ -181,6 +181,10 @@ if (isset($_POST['result_submit'])) {
                 <div class="d-grid gap-2 mt-3">
                     <button type="submit" class="btn btn-success mt-2" name="result_submit">Add Result</button>
                 </div>
+
+                <div class="d-grid gap-2 mt-3">
+                    <a href="../MResults" class="btn btn-dark">Back</a>
+                </div>
             </form>
         </div>
     </div>
