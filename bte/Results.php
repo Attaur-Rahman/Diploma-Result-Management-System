@@ -8,9 +8,9 @@ header("Cross-Origin-Resource-Policy: same-site"); // Use 'cross-origin' if need
 
 // Database connection parameters
 $host = "localhost";
-$username = "";
-$password = "";
-$database = "";
+$username = "bte_admin";
+$password = "bte@dtek_db";
+$database = "bte_dtek_db";
 
 // Create a connection
 $conn = new mysqli($host, $username, $password, $database);

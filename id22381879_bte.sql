@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 28, 2024 at 07:48 PM
+-- Generation Time: Aug 06, 2024 at 12:28 PM
 -- Server version: 10.5.20-MariaDB
 -- PHP Version: 7.3.33
 
@@ -38,7 +38,7 @@ CREATE TABLE `adminlogin` (
 --
 
 INSERT INTO `adminlogin` (`Id`, `Email`, `Password`) VALUES
-(1, 'skraheman2005@gmail.com', '$2y$10$w2NOqz1d5xCyvjTJaG.e6eI3M5RnNLo/zmx/VtGE6OuUyd5vYbIh2');
+(2, 'skraheman2005@gmail.com', '$2y$10$NCjLq4e0uQ3QlpmDCobzGOcIeiRe1k6w/k7GfcWLgMnSYV4mg7u9S');
 
 -- --------------------------------------------------------
 
@@ -87,14 +87,15 @@ INSERT INTO `institutes` (`institute_id`, `institute_name`) VALUES
 -- Table structure for table `results`
 --
 
-CREATE TABLE `results` (
-  `result_id` int(11) NOT NULL,
-  `register_number` varchar(12) DEFAULT NULL,
-  `semester_id` int(11) DEFAULT NULL,
-  `subject_code` varchar(20) DEFAULT NULL,
-  `exam_marks` int(5) DEFAULT NULL,
-  `ia_marks` int(5) DEFAULT NULL
+CREATE TABLE results (
+  result_id int(11) NOT NULL,
+  register_number varchar(12) DEFAULT NULL,
+  semester_id int(11) DEFAULT NULL,
+  subject_code varchar(20) DEFAULT NULL,
+  exam_marks int(5) DEFAULT NULL,
+  ia_marks int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 --
 -- Dumping data for table `results`
@@ -268,7 +269,7 @@ INSERT INTO `students` (`register_number`, `student_name`, `father_name`, `branc
 ('323CS21005', 'BASAWANTRAY ALLAD', 'SHIVKUMAR ALLAD', 'CS', 323),
 ('323CS21007', 'MANJUNATH', 'SHARANAPPA', 'CS', 323),
 ('323CS21008', 'MEGHA', 'SHIVARAJ', 'CS', 323),
-('323CS21009', 'MD JUNAID AHMED', 'SHABBIR AHMED', 'CS', 323),
+('323CS21009', 'MOHAMMED JUNAID AHMED', 'SHABBIR AHMED', 'CS', 323),
 ('323CS21010', 'MOHAMMED SAQEEB', 'MOHAMMED ASHFAQ', 'CS', 323),
 ('323CS21011', 'MUAZ AHMED KHAN', 'MD MUJAHID AHMED KHAN', 'CS', 323),
 ('323CS21012', 'OMKAR', 'SHIVARAJ', 'CS', 323),
@@ -476,7 +477,7 @@ ALTER TABLE `subjects`
 -- AUTO_INCREMENT for table `adminlogin`
 --
 ALTER TABLE `adminlogin`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `results`

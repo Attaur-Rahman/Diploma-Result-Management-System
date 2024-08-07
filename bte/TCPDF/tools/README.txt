@@ -1,0 +1,1 @@
+php tcpdf_addfont.php -i ../fonts/font-name.ttf -o ../fonts

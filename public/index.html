@@ -60,6 +60,26 @@
 
     <!-- Title of the page -->
     <title>BTE Results</title>
+
+    <script>
+      // Disabled Right Click
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      });
+
+      // Disabled shortcuts to open inspect etc...
+      document.addEventListener("keydown", function (e) {
+        if (
+          e.key === "F12" ||
+          (e.ctrlKey && e.shiftKey && e.key === "I") ||
+          (e.ctrlKey && e.shiftKey && e.key === "C") ||
+          (e.ctrlKey && e.shiftKey && e.key === "J") ||
+          (e.ctrlKey && e.key === "U")
+        ) {
+          e.preventDefault();
+        }
+      });
+    </script>
   </head>
 
   <body>

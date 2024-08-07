@@ -1,18 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
+// import html2canvas from "html2canvas";
+// import jsPDF from "jspdf";
 
 const HomePage = () => {
   // State variables
   const [loading, setLoading] = useState(false);
-  const [pdfLoading, setPdfLoading] = useState(false);
+  // const [pdfLoading, setPdfLoading] = useState(false);
   const [fetchedData, setFetchedData] = useState([]);
   const [overallResult, setOverallResult] = useState(null);
   const [formData, setFormData] = useState({
     RegNo: "",
     Sem: "",
   });
+  const [additionalField, setAdditionalField] = useState("");
+  const [additionalField2, setAdditionalField2] = useState("");
 
   // Ref for the container div to be converted to PDF
   const containerRef = useRef(null);
@@ -21,10 +23,26 @@ const HomePage = () => {
   const semesters = [1, 2, 3, 4, 5, 6];
 
   // Event handler for input change
+  // const handleInputChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
+
   const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+    const { name, value } = e.target;
+    setFormData((prevFormData) => {
+      const updatedFormData = { ...prevFormData, [name]: value };
+
+      // Update additional fields based on updated FormData
+      const updatedAdditionalField1 = `${updatedFormData.RegNo}`;
+      const updatedAdditionalField2 = `${updatedFormData.Sem}`;
+
+      setAdditionalField(updatedAdditionalField1);
+      setAdditionalField2(updatedAdditionalField2);
+
+      return updatedFormData;
     });
   };
 
@@ -34,7 +52,7 @@ const HomePage = () => {
     setLoading(true); // Set loading to true while fetching data
 
     try {
-      const response = await axios.get("https://website-name/bte/Results.php", {
+      const response = await axios.get("http://192.168.29.93/bte/Results.php", {
         params: {
           RegNo: formData.RegNo,
           Sem: formData.Sem,
@@ -169,74 +187,78 @@ const HomePage = () => {
     }
   };
 
-  // Function to generate PDF from the captured HTML content
   const generatePdf = () => {
-    setPdfLoading(true);
-
-    // Display a note to users
     alert("If the PDF is not opening, please try using different PDF viewers.");
-
-    // Get the container element
-    const element = containerRef.current;
-    const width = 1040;
-    const height = 1095;
-
-    // Capture the HTML content of the targeted div
-    html2canvas(element, {
-      scale: 2,
-      windowWidth: width,
-      windowHeight: height,
-    }).then((canvas) => {
-      try {
-        // Increase the scale here
-        const imgData = canvas.toDataURL("image/png");
-        const pdf = new jsPDF("p", "mm", "a4"); // Specify A4 size in millimeters
-
-        const imgWidth = pdf.internal.pageSize.getWidth();
-        const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-        // Calculate positioning to center content vertically
-        const marginTop = (pdf.internal.pageSize.getHeight() - imgHeight) / 2;
-
-        // Add header with date and time on top left corner and website title on top right corner
-        const currentDate = new Date().toLocaleDateString();
-        const currentTime = new Date().toLocaleTimeString();
-        const websiteTitle = document.title;
-        const header = `Date: ${currentDate} ${currentTime} | ${websiteTitle}`;
-        pdf.setFontSize(10);
-        pdf.text(header, 10, 13, {
-          align: "left",
-        });
-
-        // Add footer with full website address in bottom left corner and page number on bottom right corner
-        const websiteAddress = window.location.href;
-        const footer = `Website : ${websiteAddress}`;
-        pdf.text(footer, 10, pdf.internal.pageSize.getHeight() - 10, {
-          align: "left",
-        });
-        const currentPage = pdf.internal.getNumberOfPages();
-        pdf.text(
-          `Page ${currentPage}`,
-          pdf.internal.pageSize.getWidth() - 50,
-          pdf.internal.pageSize.getHeight() - 10,
-          {
-            align: "right",
-          }
-        );
-
-        // Add the captured content to the PDF, positioned in the middle
-        pdf.addImage(imgData, "PNG", 0, marginTop, imgWidth, imgHeight);
-        pdf.save(
-          `Result_${fetchedData[0].register_number}(${fetchedData[0].semester_number}).pdf`
-        );
-        setPdfLoading(false);
-      } catch (error) {
-        console.error("Error generating PDF:", error);
-        setPdfLoading(false);
-        // Handle error appropriately (e.g., show error message to user)
-      }
-    });
   };
+
+  // Function to generate PDF from the captured HTML content
+  // const generatePdf = () => {
+  //   setPdfLoading(true);
+
+  //   // Display a note to users
+  //   alert("If the PDF is not opening, please try using different PDF viewers.");
+
+  //   // Get the container element
+  //   const element = containerRef.current;
+  //   const width = 1040;
+  //   const height = 1095;
+
+  //   // Capture the HTML content of the targeted div
+  //   html2canvas(element, {
+  //     scale: 2,
+  //     windowWidth: width,
+  //     windowHeight: height,
+  //   }).then((canvas) => {
+  //     try {
+  //       // Increase the scale here
+  //       const imgData = canvas.toDataURL("image/png");
+  //       const pdf = new jsPDF("p", "mm", "a4"); // Specify A4 size in millimeters
+
+  //       const imgWidth = pdf.internal.pageSize.getWidth();
+  //       const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+  //       // Calculate positioning to center content vertically
+  //       const marginTop = (pdf.internal.pageSize.getHeight() - imgHeight) / 2;
+
+  //       // Add header with date and time on top left corner and website title on top right corner
+  //       const currentDate = new Date().toLocaleDateString();
+  //       const currentTime = new Date().toLocaleTimeString();
+  //       const websiteTitle = document.title;
+  //       const header = `Date: ${currentDate} ${currentTime} | ${websiteTitle}`;
+  //       pdf.setFontSize(10);
+  //       pdf.text(header, 10, 13, {
+  //         align: "left",
+  //       });
+
+  //       // Add footer with full website address in bottom left corner and page number on bottom right corner
+  //       const websiteAddress = window.location.href;
+  //       const footer = `Website : ${websiteAddress}`;
+  //       pdf.text(footer, 10, pdf.internal.pageSize.getHeight() - 10, {
+  //         align: "left",
+  //       });
+  //       const currentPage = pdf.internal.getNumberOfPages();
+  //       pdf.text(
+  //         `Page ${currentPage}`,
+  //         pdf.internal.pageSize.getWidth() - 50,
+  //         pdf.internal.pageSize.getHeight() - 10,
+  //         {
+  //           align: "right",
+  //         }
+  //       );
+
+  //       // Add the captured content to the PDF, positioned in the middle
+  //       pdf.addImage(imgData, "PNG", 0, marginTop, imgWidth, imgHeight);
+  //       pdf.save(
+  //         `Result_${fetchedData[0].register_number}(${fetchedData[0].semester_number}).pdf`
+  //       );
+  //       setPdfLoading(false);
+  //     } catch (error) {
+  //       console.error("Error generating PDF:", error);
+  //       setPdfLoading(false);
+  //       // Handle error appropriately (e.g., show error message to user)
+  //     }
+  //   });
+  // };
 
   // Define criteria for each subject and semester
   const criteria = {
@@ -676,13 +698,30 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <button
+
+            {/* PDF Generation Button  */}
+            <form action="http://192.168.29.93/bte/generate_pdf.php">
+              <input type="hidden" value={additionalField} name="RegisterN" />
+              <input type="hidden" value={additionalField2} name="SemN" />
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="btn btn-dark my-3 text-white"
+                  onClick={generatePdf}
+                >
+                  Download Provisional Marks Card &nbsp;
+                  <i class="fa-solid fa-download"></i>
+                </button>
+              </div>
+            </form>
+
+            {/* <button
               onClick={generatePdf}
               disabled={pdfLoading}
               className="btn btn-primary my-3 w-100"
             >
               {pdfLoading ? "Generating PDF..." : "Download as PDF"}
-            </button>
+            </button> */}
           </div>
         )}
       </div>

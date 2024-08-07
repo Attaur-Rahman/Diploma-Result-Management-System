@@ -4,9 +4,9 @@ session_start();
 
 // Database connection parameters
 $host = "localhost";
-$db_user = "";
-$db_pass = "";
-$db_name = "";
+$db_user = "bte_admin";
+$db_pass = "bte@dtek_db";
+$db_name = "bte_dtek_db";
 
 $conn = mysqli_connect($host, $db_user, $db_pass, $db_name);
 

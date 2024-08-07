@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import GovtLogo from "../images/Govt-Logo.png";
+import NewGIF from "../images/new.gif";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -58,7 +59,7 @@ const Navbar = () => {
           </a>
           <div className="d-grid gap-2 d-md-flex justify-content-md-end">
             <a
-              href="https://website-name/bte/AdminLoginPage.php"
+              href="http://192.168.29.93/bte/AdminLoginPage.php"
               className="btn btn-light"
             >
               Login
@@ -81,7 +82,16 @@ const Navbar = () => {
             e.target.start();
           }}
         >
-          {updates.join(" | ")}
+          {/* {updates.join(" | ")} */}
+          {/* <span>
+            <img
+              id="ContentPlaceHolder1_Gridlatestannoc_imgNew_7"
+              src={NewGIF}
+              alt="error_gif"
+            />
+          </span> */}
+          &nbsp;The results were updated after the Nov/Dec - 2023 Diploma
+          Examinations
         </marquee>
       </div>
     </div>

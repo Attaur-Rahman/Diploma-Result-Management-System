@@ -23,3 +23,6 @@ CHANGES SHOULD BE MADE BEFORE EXECUTING THIS WEBSITE
 Go to <a href="https://website-name/">HomePage</a>
 </span>
 </div> :-> Replace website-name with your website or localhost.
+
+7) In ./bte/generate_pdf.php :
+// Database connection parameters :-> Update database details between the quatations.
