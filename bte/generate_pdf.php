@@ -2,9 +2,9 @@
 
 // Database connection parameters
 $servername = "localhost";  // Database server
-$username = "bte_admin";    // Database username
-$password = "bte@dtek_db";  // Database password
-$dbname = "bte_dtek_db";    // Database name
+$username = "root";    // Database username
+$password = "admin";  // Database password
+$dbname = "bte";    // Database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -563,4 +563,5 @@ $pdf->SetX(110); // Set X position
 $pdf->Cell(80, 10, 'PRINCIPAL', 0, 0, 'C', 0, '', false);
 
 
-$pdf->Output("PMC-" . $student['register_number'] . "(" . $student['semester_number'] . ")", 'D');
+// $pdf->Output("PMC-" . $student['register_number'] . "(" . $student['semester_number'] . ")", 'D');
+$pdf->Output("Provisional_Marksheet_" . $student['register_number'] . "_Sem" . $student['semester_number'] . ".pdf", 'D');

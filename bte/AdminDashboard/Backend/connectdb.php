@@ -11,9 +11,9 @@ if (!isset($_SESSION['loggedin'])) {
 
 // Database connection parameters
 $servername = "localhost";
-$username = "bte_admin";
-$password = "bte@dtek_db";
-$dbname = "bte_dtek_db";
+$username = "root";
+$password = "admin";
+$dbname = "bte";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

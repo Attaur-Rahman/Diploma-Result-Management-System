@@ -83,7 +83,7 @@ if (isset($_SESSION['loggedin'])) {
                     <input type="submit" class="btn btn-success mt-2" value="Login" />
                 </div>
                 <div class="mt-3 d-flex align-items-center justify-content-center">
-                    <span class="">Go to <a href="http://192.168.29.93:3000/">HomePage</a></span>
+                    <span class="">Go to <a href="http://localhost:3000/">HomePage</a></span>
                 </div>
             </div>
         </form>

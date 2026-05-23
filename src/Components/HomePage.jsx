@@ -65,7 +65,7 @@ const HomePage = () => {
       // Calculate overall result based on criteria
       const semesterCriteria = criteria[formData.Sem];
       const hasFailedSubject = response.data.some((result) =>
-        isSubjectFailed(result, semesterCriteria)
+        isSubjectFailed(result, semesterCriteria),
       );
 
       setOverallResult(hasFailedSubject ? "Fail" : "Pass");
@@ -83,7 +83,7 @@ const HomePage = () => {
         sum +
         (result.exam_marks !== null ? parseInt(result.exam_marks) : 0) +
         (result.ia_marks !== null ? parseInt(result.ia_marks) : 0),
-      0
+      0,
     );
     return grandTotal;
   };
@@ -623,7 +623,7 @@ const HomePage = () => {
                           (result.exam_marks !== null
                             ? parseInt(result.exam_marks)
                             : 0),
-                        0
+                        0,
                       );
                       return totalExamMarks;
                     })()}
@@ -639,7 +639,7 @@ const HomePage = () => {
                           (result.ia_marks !== null
                             ? parseInt(result.ia_marks)
                             : 0),
-                        0
+                        0,
                       );
                       return totalIAMarks;
                     })()}
@@ -657,7 +657,7 @@ const HomePage = () => {
                       <i>
                         {calculatePercentage(
                           parseInt(formData.Sem),
-                          calculateGrandTotal()
+                          calculateGrandTotal(),
                         )}
                         %
                       </i>
