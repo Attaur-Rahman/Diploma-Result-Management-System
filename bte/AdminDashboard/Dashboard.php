@@ -82,7 +82,7 @@ include "../AdminDashboard/Backend/connectdb.php";
                         </div>
                     </div>
                     <div class="card-footer text-muted text-center">
-                        <a href="http://localhost:3000/" class="btn btn-outline-dark">Back</a>
+                        <a href="/" class="btn btn-outline-dark">Back</a>
                         <a href="../adminlogout" class="btn btn-danger">Logout</a>
                     </div>
                 </div>

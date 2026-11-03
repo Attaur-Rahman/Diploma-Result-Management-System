@@ -1,10 +1,7 @@
 <?php
 
-// Database connection parameters
-$servername = "localhost";  // Database server
-$username = "root";    // Database username
-$password = "admin";  // Database password
-$dbname = "bte";    // Database name
+// Database connection parameters (centralized in db_config.php for deployment)
+require_once __DIR__ . '/db_config.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

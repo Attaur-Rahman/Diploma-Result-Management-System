@@ -9,11 +9,8 @@ if (!isset($_SESSION['loggedin'])) {
     exit();
 }
 
-// Database connection parameters
-$servername = "localhost";
-$username = "root";
-$password = "admin";
-$dbname = "bte";
+// Database connection parameters (centralized in bte/db_config.php for deployment)
+require_once __DIR__ . '/../../db_config.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

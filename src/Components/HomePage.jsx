@@ -52,7 +52,7 @@ const HomePage = () => {
     setLoading(true); // Set loading to true while fetching data
 
     try {
-      const response = await axios.get("http://192.168.29.93/bte/Results", {
+      const response = await axios.get("/bte/Results", {
         params: {
           RegNo: formData.RegNo,
           Sem: formData.Sem,
@@ -700,7 +700,7 @@ const HomePage = () => {
             </div>
 
             {/* PDF Generation Button  */}
-            <form action="http://192.168.29.93/bte/generate_pdf">
+            <form action="/bte/generate_pdf">
               <input type="hidden" value={additionalField} name="RegisterN" />
               <input type="hidden" value={additionalField2} name="SemN" />
               <div className="text-center">

@@ -2,11 +2,8 @@
 
 session_start();
 
-// Database connection parameters
-$host = "localhost";
-$db_user = "root";
-$db_pass = "admin";
-$db_name = "bte";
+// Database connection parameters (centralized in db_config.php for deployment)
+require_once __DIR__ . '/db_config.php';
 
 $conn = mysqli_connect($host, $db_user, $db_pass, $db_name);
 

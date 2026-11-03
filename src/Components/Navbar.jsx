@@ -59,7 +59,7 @@ const Navbar = () => {
           </a>
           <div className="d-grid gap-2 d-md-flex justify-content-md-end">
             <a
-              href="http://192.168.29.93/bte/AdminLoginPage"
+              href="/bte/AdminLoginPage"
               className="btn btn-light"
             >
               Login
