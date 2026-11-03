@@ -6,11 +6,8 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 header("Cross-Origin-Resource-Policy: same-site"); // Use 'cross-origin' if needed
 
-// Database connection parameters
-$host = "localhost";
-$username = "root";
-$password = "admin";
-$database = "bte";
+// Database connection parameters (centralized in db_config.php for deployment)
+require_once __DIR__ . '/db_config.php';
 
 // Create a connection
 $conn = new mysqli($host, $username, $password, $database);
